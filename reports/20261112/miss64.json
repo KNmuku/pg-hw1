@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "config": {"nodes_per_list": 10000, "lists": 1, "queries": 10000, "size": 64, "repeats": 5, "hit_rate_percent": 0, "pattern": "random", "seed": 20261112, "cpu": 0, "loads_raw": 297, "stores_raw": 1577},
+  "verification": "passed",
+  "expected_hits": 0,
+  "build_ms": 2.090677,
+  "prepare_ms": 0.718126,
+  "list_bytes_before_index": 960032,
+  "list_bytes_after_index": 1280032,
+  "memory_accesses_definition": "AMD Zen5 LS-dispatched memory operations: loads + stores/RMW; speculative, not retired instructions or DRAM transactions",
+  "l1d_hit_rate_definition": "100 * (1 - generic L1D.READ.MISS / L1D.READ.ACCESS); kernel/CPU mapping dependent estimate, not L1 instruction cache",
+  "measurement_scope": "warmed search batch plus query loop and calls; excludes construction, index preparation, verification and output; three hardware groups replay the same query batch separately",
+  "results": [
+    {"algorithm": "linear", "ns_per_query_median": 13747.365000, "ns_per_query_min": 13718.661400, "ns_per_query_max": 14018.652000, "hits": 0, "checksum": 0, "timing_samples_ns_per_query": [13785.463900, 14018.652000, 13718.661400, 13747.365000, 13747.117000], "instructions": 2600400253.000000, "cycles": 764769676.600000, "memory_accesses": 1007751260.200000, "l1d_read_accesses": 1032134236.000000, "l1d_read_misses": 175055667.200000, "l1d_hit_rate_percent": 83.039448, "counter_groups": [{"available": true, "errno": 0, "error": "", "stage": "", "running_percent": 100.000000}, {"available": true, "errno": 0, "error": "", "stage": "", "running_percent": 100.000000}, {"available": true, "errno": 0, "error": "", "stage": "", "running_percent": 100.000000}]},
+    {"algorithm": "indexed", "ns_per_query_median": 59.918300, "ns_per_query_min": 52.531200, "ns_per_query_max": 65.911400, "hits": 0, "checksum": 0, "timing_samples_ns_per_query": [59.918300, 52.531200, 65.170500, 53.017200, 65.911400], "instructions": 3128722.600000, "cycles": 3357467.200000, "memory_accesses": 2609610.200000, "l1d_read_accesses": 1452826.400000, "l1d_read_misses": 178191.000000, "l1d_hit_rate_percent": 87.734873, "counter_groups": [{"available": true, "errno": 0, "error": "", "stage": "", "running_percent": 100.000000}, {"available": true, "errno": 0, "error": "", "stage": "", "running_percent": 100.000000}, {"available": true, "errno": 0, "error": "", "stage": "", "running_percent": 100.000000}]}
+  ],
+  "speedup": 229.435164
+}

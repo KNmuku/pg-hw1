@@ -1,0 +1,16 @@
+make BUILD=build/sanitize CFLAGS='-O1 -g -std=c11 -Wall -Wextra -Wpedantic -Werror -fsanitize=address,undefined -fno-omit-frame-pointer' LDFLAGS='-fsanitize=address,undefined' test
+gcc -Iinclude -O1 -g -std=c11 -Wall -Wextra -Wpedantic -Werror -fsanitize=address,undefined -fno-omit-frame-pointer src/bench.c src/link.c src/perf_metrics.c -fsanitize=address,undefined -o build/sanitize/bench
+gcc -Iinclude -O1 -g -std=c11 -Wall -Wextra -Wpedantic -Werror -fsanitize=address,undefined -fno-omit-frame-pointer tests/test_perf.c src/perf_metrics.c -fsanitize=address,undefined -o build/sanitize/test_perf
+gcc -Iinclude -O1 -g -std=c11 -Wall -Wextra -Wpedantic -Werror -fsanitize=address,undefined -fno-omit-frame-pointer examples/demo.c src/link.c -fsanitize=address,undefined -o build/sanitize/demo
+./build/sanitize/test_link
+PASS basic APIs, bounds, binary copy, ring and allocation failures
+PASS 12000 nodes, 512-byte common prefixes, duplicates, index rebuild
+PASS 7000 randomized mixed-length queries against linear oracle
+PASS 20000 independent lists and isolation
+ALL LINK TESTS PASSED
+./build/sanitize/test_perf
+ALL PERF SCALING TESTS PASSED
+./build/sanitize/demo
+nodes=2 found=no hash sorted index
+sh tests/test_cli.sh ./build/sanitize/bench
+ALL CLI TESTS PASSED (invalid options, patterns, hit rates, strict PMU status)

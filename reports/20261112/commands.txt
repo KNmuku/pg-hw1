@@ -1,0 +1,11 @@
+./build/bench --nodes 10000 --queries 10000 --size 32 --repeats 5 --json
+./build/bench --nodes 10000 --queries 10000 --size 64 --repeats 5 --json
+./build/bench --nodes 10000 --queries 10000 --size 128 --repeats 5 --json
+./build/bench --nodes 10000 --queries 10000 --size 512 --repeats 5 --json
+./build/bench --nodes 10000 --queries 10000 --size 64 --repeats 5 --pattern prefix --json
+./build/bench --nodes 10000 --queries 10000 --size 512 --repeats 5 --pattern prefix --json
+./build/bench --nodes 10000 --queries 10000 --size 64 --repeats 5 --pattern duplicate --json
+./build/bench --nodes 10000 --queries 10000 --size 64 --repeats 5 --hit-rate 0 --json
+./build/bench --nodes 10000 --queries 10000 --size 64 --repeats 5 --hit-rate 100 --json
+./build/bench --nodes 1000 --queries 10000 --size 64 --repeats 5 --json
+./build/bench --nodes 1 --lists 20000 --queries 20000 --size 32 --repeats 5 --json

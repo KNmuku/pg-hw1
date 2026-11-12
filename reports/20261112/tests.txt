@@ -1,0 +1,15 @@
+gcc -Iinclude -O2 -g -std=c11 -Wall -Wextra -Wpedantic -Werror src/bench.c src/link.c src/perf_metrics.c  -o build/bench
+gcc -Iinclude -O2 -g -std=c11 -Wall -Wextra -Wpedantic -Werror tests/test_perf.c src/perf_metrics.c  -o build/test_perf
+gcc -Iinclude -O2 -g -std=c11 -Wall -Wextra -Wpedantic -Werror examples/demo.c src/link.c  -o build/demo
+./build/test_link
+PASS basic APIs, bounds, binary copy, ring and allocation failures
+PASS 12000 nodes, 512-byte common prefixes, duplicates, index rebuild
+PASS 7000 randomized mixed-length queries against linear oracle
+PASS 20000 independent lists and isolation
+ALL LINK TESTS PASSED
+./build/test_perf
+ALL PERF SCALING TESTS PASSED
+./build/demo
+nodes=2 found=no hash sorted index
+sh tests/test_cli.sh ./build/bench
+ALL CLI TESTS PASSED (invalid options, patterns, hit rates, strict PMU status)

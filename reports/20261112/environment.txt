@@ -1,0 +1,16 @@
+date_utc=2026-11-12T09:51:18Z
+Linux 6.18.33.2-microsoft-standard-WSL2 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04 LTS"
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+build_flags=-O2 -g -std=c11 -Wall -Wextra -Wpedantic -Werror
+perf_event_paranoid=2
+Architecture:                            x86_64
+CPU(s):                                  32
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 9 9950X3D 16-Core Processor
+CPU family:                              26
+Model:                                   68
+Hypervisor vendor:                       Microsoft
+L1d cache:                               768 KiB (16 instances)
+L2 cache:                                16 MiB (16 instances)
+L3 cache:                                96 MiB (1 instance)
